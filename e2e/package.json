@@ -1,0 +1,19 @@
+{
+  "name": "@book/e2e",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "llm": "vitest run --config vitest.llm.config.ts",
+    "ui": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@stripe/cli": "^1.50.6",
+    "@types/node": "^26.4.0",
+    "typescript": "^7.0.2",
+    "undici": "^8.10.0",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@book/infra",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@book/secrets": "workspace:*",
+    "@effect/platform-bun": ">=4.0.0-beta.105 || >=4.0.0",
+    "@effect/platform-node": ">=4.0.0-beta.105 || >=4.0.0",
+    "alchemy": "2.0.0-beta.74",
+    "commander": "^15.0.0",
+    "effect": ">=4.0.0-beta.105 || >=4.0.0",
+    "stripe": "^22.6.0",
+    "zod": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0",
+    "typescript": "^7.0.2"
+  }
+}

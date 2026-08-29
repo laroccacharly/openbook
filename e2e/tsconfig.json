@@ -1,0 +1,21 @@
+{
+  "extends": "../worker/tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["@types/node", "vitest/globals"]
+  },
+  "include": [
+    "./**/*.ts",
+    "../worker/src/**/*.ts",
+    "./playwright.config.ts",
+    "./vitest.llm.config.ts"
+  ],
+  "exclude": [
+    "../worker/src/index.ts",
+    "../worker/src/inbound-message-workflow/index.ts",
+    "../worker/src/message-delivery/deliver.ts",
+    "../worker/src/message-delivery/index.ts",
+    "../worker/src/message-delivery/workflow.ts",
+    "../worker/src/inbound-message-workflow/workflow.ts"
+  ]
+}

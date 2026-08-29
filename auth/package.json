@@ -1,0 +1,18 @@
+{
+  "name": "@book/auth",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@book/secrets": "workspace:*",
+    "better-auth": "^1.7.2",
+    "commander": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0",
+    "typescript": "^7.0.2"
+  }
+}

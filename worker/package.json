@@ -1,0 +1,36 @@
+{
+  "name": "worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint",
+    "typecheck": "bun run typecheck:unit",
+    "typecheck:unit": "tsc --project tests/tsconfig.json",
+    "unit": "vitest run",
+    "coverage": "vitest run --coverage",
+    "watch": "vitest"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.51",
+    "@openrouter/ai-sdk-provider": "^3.0.0",
+    "@perplexity-ai/perplexity_ai": "^0.38.3",
+    "ai": "^7.0.84",
+    "better-auth": "^1.7.2",
+    "hono": "^4.13.5",
+    "postal-mime": "^3.0.0",
+    "stripe": "^22.6.0",
+    "workers-ai-provider": "^4.0.0",
+    "zod": "^4.5.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260829.1",
+    "@types/node": "^26.4.0",
+    "@vitest/coverage-istanbul": "^4.1.11",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "workerd": "1.20260730.1"
+  }
+}

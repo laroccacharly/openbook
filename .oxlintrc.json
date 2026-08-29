@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "plugins": ["typescript"],
+  "rules": {
+    "max-depth": ["error", { "max": 2 }],
+    "complexity": ["error", 15],
+    "no-param-reassign": "error",
+    "id-denylist": ["error", "fromEmail", "getCustomerByFromEmail"],
+    "typescript/explicit-module-boundary-types": "error",
+    "typescript/no-deprecated": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/no-unnecessary-condition": "error",
+    "typescript/no-restricted-types": [
+      "error",
+      {
+        "types": {
+          "any": "Do not use any. Prefer unknown at boundaries and narrow, or a concrete type.",
+          "Record<string, unknown>": "Do not use Record<string, unknown>. Prefer a named interface, a concrete object type, or unknown narrowed at the boundary.",
+          "Array<unknown>": "Do not use Array<unknown>. Prefer a named type or parse rows/values individually.",
+          "object": "Do not use object. Prefer a named interface or a concrete object type."
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/tests/**", "**/e2e/**", "**/*.test.ts", "**/*.test.tsx"],
+      "rules": {
+        "typescript/no-non-null-assertion": "off",
+        "complexity": "off"
+      }
+    }
+  ]
+}

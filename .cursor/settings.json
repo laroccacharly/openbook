@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "twilio-developer-kit": {
+      "enabled": true
+    },
+    "shadcn": {
+      "enabled": true
+    },
+    "cloudflare": {
+      "enabled": true
+    },
+    "browse": {
+      "enabled": true
+    }
+  }
+}

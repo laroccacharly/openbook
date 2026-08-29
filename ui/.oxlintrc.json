@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["../.oxlintrc.json"],
+  "plugins": ["react", "typescript", "oxc"],
+  "rules": {
+    "typescript/explicit-module-boundary-types": "off",
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }],
+    "react/error-boundaries": "error",
+    "react/globals": "error",
+    "react/immutability": "error",
+    "react/incompatible-library": "error",
+    "react/preserve-manual-memoization": "error",
+    "react/purity": "error",
+    "react/refs": "error",
+    "react/set-state-in-effect": "error",
+    "react/set-state-in-render": "error",
+    "react/static-components": "error",
+    "react/use-memo": "error",
+    "react/void-use-memo": "error"
+  },
+  "overrides": [
+    {
+      "files": ["src/components/ui/**"],
+      "rules": {
+        "react/only-export-components": "off",
+        "complexity": "off",
+        "no-param-reassign": "off"
+      }
+    }
+  ]
+}

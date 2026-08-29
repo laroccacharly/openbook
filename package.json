@@ -1,0 +1,35 @@
+{
+  "name": "book",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "api",
+    "auth",
+    "infra",
+    "worker",
+    "e2e",
+    "ui",
+    "secrets",
+    "tooling"
+  ],
+  "type": "module",
+  "scripts": {
+    "api": "bun ./api/cli.ts",
+    "auth": "bun ./auth/cli.ts",
+    "infra": "bun ./infra/cli.ts",
+    "sms": "bun ./infra/sms/cli.ts",
+    "email": "bun ./infra/email/cli.ts",
+    "setup:playwright": "bun ./tooling/cli.ts setup:playwright",
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "test": "bun ./tooling/cli.ts test"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "oxlint-tsgolint": "7"
+  },
+  "overrides": {
+    "workerd": "1.20260730.1"
+  }
+}

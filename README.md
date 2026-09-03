@@ -6,6 +6,10 @@ The system can create, reschedule, and cancel bookings, or answer questions. Boo
 
 Book relies heavily on end-to-end tests with an LLM in the loop to ensure reliable behavior.
 
+# Demo
+
+[![Book demo](https://img.youtube.com/vi/NIlFsL4n7iw/maxresdefault.jpg)](https://youtu.be/NIlFsL4n7iw)
+
 # Infra
 
 The infrastructure is built on Cloudflare for all of its components (except Twilio for handling SMS). We use Alchemy for Infrastructure as Code (IaC). We use D1 for the database, and email is handled by Cloudflare. 
